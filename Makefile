@@ -1,11 +1,18 @@
-SRC_NAME =	hello_world.s \
-			ft_bzero.s \
+SRC_NAME =	ft_bzero.s \
 			ft_strlen.s \
-			ft_strcat.s
+			ft_strcat.s \
+			ft_isalpha.s \
+			ft_isdigit.s \
+			ft_isalnum.s \
+			ft_isascii.s \
+			ft_isprint.s \
+			ft_memcpy.s \
+			ft_puts.s \
+			ft_strdup.s
 
 OBJ_PATH = ./objs/
 
-NAME = lib
+NAME = lib.a
 
 CC = /Users/magouin/brew/Cellar/nasm/2.13.03/bin/nasm
 
@@ -24,10 +31,11 @@ all : $(NAME)
 
 $(OBJ_PATH)%.o: $(SRC_PATH)%.s
 	@mkdir $(OBJ_PATH) 2> /dev/null || echo "" > /dev/null
-	$(CC) $(CFLAGS) -o $@ $<
+	$(CC) -I /lib/ld-linux.so.2 $(CFLAGS) -o $@ $<
 
 $(NAME) : $(OBJ)
-	$(LINKER) -lc $^ -o $@
+	ar rc $(NAME) $^
+	gcc main.c $(NAME)
 
 clean:
 	@/bin/rm -f $(OBJ)

@@ -1,8 +1,8 @@
-global ft_strlen
+global _ft_strlen
 
 section .text
 
-ft_strlen:
+_ft_strlen:
 	push rcx
 	push r9
 	push rdi

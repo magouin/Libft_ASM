@@ -1,8 +1,8 @@
-global ft_bzero
+global _ft_bzero
 
 section .text
 
-ft_bzero:
+_ft_bzero:
 	push	rcx
 	push	rsi
 	push	r9

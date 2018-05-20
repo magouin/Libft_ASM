@@ -1,8 +1,8 @@
-global ft_strcat
+global _ft_strcat
 
 section .text
 
-ft_strcat:
+_ft_strcat:
 	push	rcx
 	push	rsi
 	push	r9
@@ -18,7 +18,7 @@ copy:
 	cmp		BYTE [rsi], 0
 	je		return
 	mov		bx, [rsi]
-	lea		BYTE rdi, [rsi]
+	lea		rdi, [rsi]
 	inc		rdi
 	inc		rsi
 	jmp		copy
