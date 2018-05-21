@@ -11,6 +11,8 @@ _ft_isascii:
 	mov		rax, 0
 	cmp		edi, 0
 	jl		exit
+	cmp		edi, 127
+	jg		exit
 	mov		rax, 1
 exit:
 	pop		rdi

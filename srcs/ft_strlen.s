@@ -7,19 +7,19 @@ _ft_strlen:
 	push r9
 	push rdi
 	push rsi
-	sub rcx, rcx
-begin:
+	mov rcx, 0
 	mov r9, rdi
-	add r9, rcx
+begin:
 	mov	al, [r9]
 	cmp al, 0
 	je reta
 	inc rcx
+	inc r9
 	jmp begin
 reta:
 	mov rax, rcx
-	pop	 rcx
-	pop	 r9
-	pop	 rdi
 	pop	 rsi
+	pop	 rdi
+	pop	 r9
+	pop	 rcx
 	ret

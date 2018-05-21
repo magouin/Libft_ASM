@@ -27,26 +27,27 @@ char	*ft_strcat(char *dest, const char *src);
 
 int main()
 {
-	char	buffer[20];
+	char	buffer[20]="1234567891234567891";
 	char	str1[] = "test1";
 	char	str2[] = " test2";
 	char	isdigi[] = "01656161161234567890";
 	char	*dup;
 	int		c;
+	char 	cha = '\n';
 
-	write(1, buffer, 20);
-	printf("\n");
-	ft_bzero(buffer, 20);
-	write(1, buffer, 20);
+	// write(1, buffer, 20);
+	// write(1, &cha, 1);
+	// ft_bzero(buffer, 20);
+	// write(1, buffer, 20);
 
-	ft_memcpy(buffer, str1, 6);
-	ft_strcat(buffer, str2);
-	ft_puts(buffer);
-	dup = ft_strdup(isdigi);
-	ft_puts(dup);
+	// ft_memcpy(buffer, str1, 6);
+	// ft_strcat(buffer, str2);
+	// ft_puts(buffer);
+	// dup = ft_strdup(isdigi);
+	// ft_puts(dup);
 
-	c = 0;
-	while (c < 256)
+	c = -100;
+	while (c < 356)
 	{
 		if (isdigit(c) != ft_isdigit(c))
 			ft_puts("Error");

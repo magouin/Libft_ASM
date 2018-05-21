@@ -6,23 +6,23 @@ section .text
 
 _ft_puts:
 	push rdx
-	push rax
 	push rsi
 	push rdi
 	push rbp
 	mov	rbp, rsp
 	sub	rsp, 16
 
-	mov DWORD [rbp], 10
+	mov DWORD [rbp - 8], 10
 	call _ft_strlen
 	mov rdx, rax
 	mov rsi, rdi
 	mov rdi, 1
-	mov rax, 4
+	mov rax, 0x2000004
 	syscall
-	mov rax, 4
+	mov rax, 0x2000004
 	mov rdi, 1
 	mov rsi, rbp
+	sub rsi, 8
 	mov rdx, 1
 	syscall
 	
@@ -30,6 +30,5 @@ _ft_puts:
 	pop	rbp
 	pop rdi
 	pop rsi
-	pop rax
 	pop rdx
 	ret

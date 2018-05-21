@@ -11,7 +11,8 @@ _ft_isdigit:
 	mov		rax, 0
 	cmp		edi, 48
 	jl		exit
-	cmp		edi, 58
+	cmp		edi, 57
+	jg		exit
 	mov		rax, 1
 exit:
 	pop		rdi

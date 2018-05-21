@@ -17,7 +17,8 @@ _ft_isalpha:
 next:
 	cmp		edi, 97
 	jl		exit
-	cmp		edi, 123
+	cmp		edi, 122
+	jg		exit
 	mov		rax, 1
 exit:
 	pop		rdi

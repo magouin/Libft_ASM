@@ -11,8 +11,9 @@ _ft_isalnum:
 	push	r9
 	push	rdi
 
+	mov		rax, 0
 	call	_ft_isalpha
-	cmp		rax, 0
+	cmp		rax, 1
 	je		exit
 	call	_ft_isdigit
 exit:
