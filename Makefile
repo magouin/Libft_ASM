@@ -35,7 +35,7 @@ $(OBJ_PATH)%.o: $(SRC_PATH)%.s
 
 $(NAME) : $(OBJ)
 	ar rc $(NAME) $^
-	gcc main.c $(NAME)
+	gcc main.c $(NAME) -g
 
 clean:
 	@/bin/rm -f $(OBJ)

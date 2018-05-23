@@ -7,6 +7,7 @@ _ft_bzero:
 	push	rsi
 	push	r9
 	push	rdi
+
 	sub		rcx, rcx
 begin:
 	cmp		rsi, rcx
@@ -17,6 +18,7 @@ begin:
 	inc		rcx
 	jmp		begin
 reta:
+
 	pop		rdi
 	pop		r9
 	pop		rsi

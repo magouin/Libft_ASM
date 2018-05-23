@@ -7,6 +7,7 @@ _ft_strlen:
 	push r9
 	push rdi
 	push rsi
+
 	mov rcx, 0
 	mov r9, rdi
 begin:
@@ -18,6 +19,7 @@ begin:
 	jmp begin
 reta:
 	mov rax, rcx
+	
 	pop	 rsi
 	pop	 rdi
 	pop	 r9

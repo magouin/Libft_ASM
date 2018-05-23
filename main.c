@@ -35,16 +35,16 @@ int main()
 	int		c;
 	char 	cha = '\n';
 
-	// write(1, buffer, 20);
-	// write(1, &cha, 1);
-	// ft_bzero(buffer, 20);
-	// write(1, buffer, 20);
+	write(1, buffer, 20);
+	write(1, &cha, 1);
+	ft_bzero(buffer, 20);
+	write(1, buffer, 20);
 
-	// ft_memcpy(buffer, str1, 6);
-	// ft_strcat(buffer, str2);
-	// ft_puts(buffer);
-	// dup = ft_strdup(isdigi);
-	// ft_puts(dup);
+	ft_memcpy(buffer, str1, 6);
+	ft_strcat(buffer, str2);
+	ft_puts(buffer);
+	dup = ft_strdup(isdigi);
+	ft_puts(dup);
 
 	c = -100;
 	while (c < 356)

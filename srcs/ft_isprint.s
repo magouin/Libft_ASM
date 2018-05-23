@@ -11,8 +11,8 @@ _ft_isprint:
 	mov		rax, 0
 	cmp		edi, 32
 	jl		exit
-	cmp		edi, 127
-	je		exit
+	cmp		edi, 126
+	jg		exit
 	mov		rax, 1
 exit:
 	pop		rdi
