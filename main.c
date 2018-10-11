@@ -19,35 +19,35 @@ int		ft_isalnum(int str);
 int		ft_isascii(int str);
 int		ft_isprint(int str);
 void	ft_puts(char *str);
+int 	ft_strlen(char *str);
 char 	*ft_strdup(char *str);
+void	*ft_memset(void *str, int nb, size_t len);
 void	ft_bzero(void *str, int nb);
 void	ft_memcpy(void *dest, const void *src, size_t nb);
 char	*ft_strcat(char *dest, const char *src);
+char	*ft_cat(char *cat);
 
 
 int main()
 {
-	char	buffer[20]="1234567891234567891";
+	char	buffer[20]="123456789123456789\n";
 	char	str1[] = "test1";
 	char	str2[] = " test2";
 	char	isdigi[] = "01656161161234567890";
 	char	*dup;
 	int		c;
-	char 	cha = '\n';
 
-	write(1, buffer, 20);
-	write(1, &cha, 1);
+	ft_puts(buffer);
 	ft_bzero(buffer, 20);
-	write(1, buffer, 20);
-
+	ft_puts(buffer);
 	ft_memcpy(buffer, str1, 6);
 	ft_strcat(buffer, str2);
 	ft_puts(buffer);
 	dup = ft_strdup(isdigi);
 	ft_puts(dup);
-
-	c = -100;
-	while (c < 356)
+	ft_puts((char*)ft_memset(dup, 'a', ft_strlen(dup)));
+	c = 0;
+	while (c < 256)
 	{
 		if (isdigit(c) != ft_isdigit(c))
 			ft_puts("Error");
@@ -60,6 +60,7 @@ int main()
 		if (isprint(c) != ft_isprint(c))
 			ft_puts("Error");
 		c++;
-	} 
+	}
+	ft_cat("main.c");
 	return (0);
 }

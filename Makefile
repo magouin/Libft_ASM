@@ -6,9 +6,11 @@ SRC_NAME =	ft_bzero.s \
 			ft_isalnum.s \
 			ft_isascii.s \
 			ft_isprint.s \
+			ft_memset.s \
 			ft_memcpy.s \
 			ft_puts.s \
-			ft_strdup.s
+			ft_strdup.s \
+			ft_cat.s
 
 OBJ_PATH = ./objs/
 
