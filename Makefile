@@ -14,6 +14,8 @@ OBJ_PATH = ./objs/
 
 NAME = lib.a
 
+NAME_TEST = main_test
+
 CC = /Users/magouin/brew/Cellar/nasm/2.13.03/bin/nasm
 
 LINKER = gcc -m64
@@ -35,7 +37,7 @@ $(OBJ_PATH)%.o: $(SRC_PATH)%.s
 
 $(NAME) : $(OBJ)
 	ar rc $(NAME) $^
-	gcc main.c $(NAME) -g
+	gcc main.c $(NAME) -o $(NAME_TEST)
 
 clean:
 	@/bin/rm -f $(OBJ)
@@ -43,6 +45,7 @@ clean:
 
 fclean: clean
 	@/bin/rm -f $(NAME)
+	@/bin/rm -f $(NAME_TEST)
 
 re: fclean all
 
