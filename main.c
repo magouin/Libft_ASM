@@ -12,6 +12,7 @@
 
 #include <ctype.h>
 #include <unistd.h>
+#include <fcntl.h>
 
 int		ft_isdigit(int str);
 int		ft_isalpha(int str);
@@ -25,10 +26,10 @@ void	*ft_memset(void *str, int nb, size_t len);
 void	ft_bzero(void *str, int nb);
 void	ft_memcpy(void *dest, const void *src, size_t nb);
 char	*ft_strcat(char *dest, const char *src);
-char	*ft_cat(char *cat);
+char	*ft_cat(int fd);
 
 
-int main()
+int main(int ac, char **av)
 {
 	char	buffer[20]="123456789123456789\n";
 	char	str1[] = "test1";
@@ -61,6 +62,6 @@ int main()
 			ft_puts("Error");
 		c++;
 	}
-	ft_cat("main.c");
+	ft_cat(open(av[1], O_RDONLY));
 	return (0);
 }
