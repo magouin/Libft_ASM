@@ -10,11 +10,11 @@ _ft_isprint:
 
 	mov		rax, 0
 	cmp		edi, 32
-	jl		exit
+	jl		.exit
 	cmp		edi, 126
-	jg		exit
+	jg		.exit
 	mov		rax, 1
-exit:
+.exit:
 	pop		rdi
 	pop		r9
 	pop		rsi

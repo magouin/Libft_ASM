@@ -10,11 +10,11 @@ _ft_isascii:
 
 	mov		rax, 0
 	cmp		edi, 0
-	jl		exit
+	jl		.exit
 	cmp		edi, 127
-	jg		exit
+	jg		.exit
 	mov		rax, 1
-exit:
+.exit:
 	pop		rdi
 	pop		r9
 	pop		rsi

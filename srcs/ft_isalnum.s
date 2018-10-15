@@ -14,9 +14,9 @@ _ft_isalnum:
 	mov		rax, 0
 	call	_ft_isalpha
 	cmp		rax, 1
-	je		exit
+	je		.exit
 	call	_ft_isdigit
-exit:
+.exit:
 	pop		rdi
 	pop		r9
 	pop		rsi

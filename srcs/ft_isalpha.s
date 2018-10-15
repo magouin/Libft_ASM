@@ -10,17 +10,17 @@ _ft_isalpha:
 
 	mov		rax, 0
 	cmp		edi, 65
-	jl		exit
+	jl		.exit
 	cmp		edi, 90
-	jg		next
+	jg		.next
 	mov		rax, 1
-next:
+.next:
 	cmp		edi, 97
-	jl		exit
+	jl		.exit
 	cmp		edi, 122
-	jg		exit
+	jg		.exit
 	mov		rax, 1
-exit:
+.exit:
 	pop		rdi
 	pop		r9
 	pop		rsi
